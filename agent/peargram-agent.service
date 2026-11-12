@@ -1,0 +1,16 @@
+[Unit]
+Description=PearGram status agent
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/peargram-agent.env
+ExecStart=/usr/bin/node /opt/peargram-agent/agent.js
+Restart=always
+RestartSec=3
+DynamicUser=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

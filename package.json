@@ -1,0 +1,5 @@
+{
+  "name": "peargram-status",
+  "private": true,
+  "engines": { "node": ">=20" }
+}
